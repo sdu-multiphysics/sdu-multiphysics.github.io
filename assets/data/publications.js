@@ -111,7 +111,7 @@ const PUBLICATIONS = [
     openAccess: false,
     links: [
       { label: "hal-05131366v2", url: "https://hal.science/hal-05131366v2" },
-      { label: "Postprint",      url: "assets/files/" }
+      { label: "Postprint",      url: "assets/files/postprints/Slip_Postprint.pdf" }
     ]
   },
 
@@ -125,7 +125,7 @@ const PUBLICATIONS = [
     doi:        "10.1007/s00158-025-04217-2",
     openAccess: false,
     links: [
-      { label: "Postprint", url: "assets/files/" }
+      { label: "Postprint", url: "assets/files/postprints/Mac_Paper1_Postprint.pdf" }
     ]
   },
 
@@ -157,7 +157,7 @@ const PUBLICATIONS = [
     openAccess: false,
     links: [
       { label: "arXiv:2411.19030", url: "https://arxiv.org/abs/2411.19030" },
-      { label: "Postprint",        url: "assets/files/" }
+      { label: "Postprint",        url: "assets/files/postprints/Appel2025_Parareal_Postprint.pdf" }
     ]
   },
 
@@ -369,7 +369,7 @@ const PUBLICATIONS = [
     openAccess: false,
     links: [
       { label: "arXiv:2007.01759", url: "https://arxiv.org/abs/2007.01759" },
-      { label: "Postprint",        url: "assets/files/" }
+      { label: "Postprint",        url: "assets/files/postprints/hex2fluid_postprint.pdf" }
     ]
   },
 
@@ -384,7 +384,7 @@ const PUBLICATIONS = [
     openAccess: false,
     links: [
       { label: "arXiv:1911.12987", url: "https://arxiv.org/abs/1911.12987" },
-      { label: "Postprint",        url: "assets/files/" }
+      { label: "Postprint",        url: "assets/files/postprints/pseudo3d_postprint.pdf" }
     ]
   },
 
@@ -411,7 +411,7 @@ const PUBLICATIONS = [
     openAccess: false,
     links: [
       { label: "arXiv:1904.00182", url: "https://arxiv.org/abs/1904.00182" },
-      { label: "Postprint",        url: "assets/files/" }
+      { label: "Postprint",        url: "assets/files/postprints/darcy3d_postprint.pdf" }
     ]
   },
 
@@ -598,7 +598,7 @@ const PUBLICATIONS = [
     openAccess: false,
     links: [
       { label: "arXiv:2012.04310", url: "https://arxiv.org/abs/2012.04310" },
-      { label: "Postprint",        url: "assets/files/" }
+      { label: "Postprint",        url: "assets/files/postprints/ITherm2021_revised.pdf" }
     ]
   },
 
@@ -612,7 +612,7 @@ const PUBLICATIONS = [
     doi:        "10.1109/ITherm45881.2020.9190302",
     openAccess: false,
     links: [
-      { label: "Postprint", url: "assets/files/" }
+      { label: "Postprint", url: "assets/files/postprints/Alexandersen_ITherm2020_v2.pdf" }
     ]
   },
 
