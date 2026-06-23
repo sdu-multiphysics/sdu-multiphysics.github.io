@@ -484,7 +484,10 @@ const PUBLICATIONS = [
     details:    "122:138–149",
     doi:        "10.1016/j.ijheatmasstransfer.2018.01.103",
     openAccess: false,
-    links: []
+    links: [
+      { label: "Postprint", url: "assets/files/postprints/LED_lamps_postprint.pdf" },
+      { label: "Preprint",  url: "assets/files/postprints/LED_lamps_preprint.pdf" }
+    ]
   },
 
 
@@ -502,7 +505,8 @@ const PUBLICATIONS = [
     doi:        "10.1016/j.ijheatmasstransfer.2016.05.013",
     openAccess: false,
     links: [
-      { label: "arXiv:1508.04596", url: "https://arxiv.org/abs/1508.04596" }
+      { label: "arXiv:1508.04596", url: "https://arxiv.org/abs/1508.04596" },
+      { label: "Postprint",        url: "assets/files/postprints/largescale3D_postprint.pdf" }
     ]
   },
 
@@ -515,7 +519,9 @@ const PUBLICATIONS = [
     details:    "54(4):1045–1060",
     doi:        "10.1007/s00158-016-1433-2",
     openAccess: false,
-    links: []
+    links: [
+      { label: "Postprint", url: "assets/files/postprints/industrial_application_postprint.pdf" }
+    ]
   },
 
 
@@ -532,7 +538,9 @@ const PUBLICATIONS = [
     details:    "52(5):929–943",
     doi:        "10.1007/s00158-015-1279-z",
     openAccess: false,
-    links: []
+    links: [
+      { label: "Postprint", url: "assets/files/postprints/stress_constrained_postprint.pdf" }
+    ]
   },
 
   {
@@ -545,7 +553,8 @@ const PUBLICATIONS = [
     doi:        "10.1016/j.cma.2015.02.028",
     openAccess: false,
     links: [
-      { label: "arXiv:1411.3923", url: "https://arxiv.org/abs/1411.3923" }
+      { label: "arXiv:1411.3923", url: "https://arxiv.org/abs/1411.3923" },
+      { label: "Postprint",       url: "assets/files/postprints/microstructural_postprint.pdf" }
     ]
   },
 
