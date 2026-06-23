@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publications — MSOE Group, SDU</title>
+  <meta name="description" content="Publications from the MSOE research group at the University of Southern Denmark.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ======================================================
+       NAVIGATION
+       ====================================================== -->
+  <header>
+    <nav class="main-nav">
+      <div class="container">
+        <a href="index.html" class="nav-logo"><span>MSOE</span> Group</a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="publications.html" class="active">Publications</a></li>
+          <li><a href="presentations.html">Presentations</a></li>
+          <li><a href="group.html">Group</a></li>
+          <li><a href="biography.html">Biography</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- ======================================================
+       PAGE HEADER
+       ====================================================== -->
+  <div class="page-header">
+    <div class="container">
+      <h1>Publications</h1>
+      <p>
+        All publications are listed below. Use the filters to show a subset,
+        or type in the search box to find a specific paper.
+        <br>To add new publications, edit <code>assets/data/publications.js</code>.
+      </p>
+    </div>
+  </div>
+
+
+  <main>
+    <div class="container">
+
+      <!-- ====================================================
+           FILTER CONTROLS
+           ==================================================== -->
+      <div class="pub-controls">
+
+        <!-- Filter by type -->
+        <div class="pub-filter-group" id="type-filters" role="group" aria-label="Filter by type">
+          <button class="pub-filter-btn active" data-filter="all">All</button>
+          <button class="pub-filter-btn" data-filter="journal">Journal papers</button>
+          <button class="pub-filter-btn" data-filter="conference">Conference papers</button>
+          <button class="pub-filter-btn" data-filter="review">Under review</button>
+        </div>
+
+        <!-- Text search -->
+        <div class="pub-search">
+          <input type="search" id="pub-search-input"
+                 placeholder="Search title, author, journal…"
+                 aria-label="Search publications">
+        </div>
+
+        <!-- Live count -->
+        <span class="pub-count" id="pub-count"></span>
+
+      </div>
+
+      <!-- Publications are rendered here by JavaScript -->
+      <div id="pub-list"></div>
+
+    </div><!-- /container -->
+  </main>
+
+
+  <!-- ======================================================
+       FOOTER
+       ====================================================== -->
+  <footer class="main-footer">
+    <div class="container">
+      <span>&copy; MSOE Group, University of Southern Denmark</span>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="publications.html">Publications</a>
+        <a href="presentations.html">Presentations</a>
+        <a href="group.html">Group</a>
+        <a href="biography.html">Biography</a>
+      </nav>
+    </div>
+  </footer>
+
+
+  <!-- Load the publications data file first, then the rendering script below -->
+  <script src="assets/data/publications.js"></script>
+
+  <script>
+    /*
+     * Publications rendering script
+     * ---------------------------------
+     * Reads the PUBLICATIONS array (defined in publications.js),
+     * applies the active filter and search term, and renders HTML.
+     * No external libraries — pure vanilla JavaScript.
+     */
+
+    var activeFilter = 'all';
+    var searchTerm   = '';
+
+    /* Build a DOI link URL */
+    function doiUrl(doi) {
+      return 'https://doi.org/' + doi;
+    }
+
+    /* Escape HTML special characters to prevent any injection */
+    function esc(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    /* Render a single publication entry as an HTML string */
+    function renderEntry(pub) {
+      var html = '<div class="pub-entry">';
+
+      /* Title */
+      if (pub.doi) {
+        html += '<a class="pub-title" href="' + esc(doiUrl(pub.doi)) + '" target="_blank" rel="noopener">'
+             + esc(pub.title) + '</a>';
+      } else {
+        html += '<span class="pub-title">' + esc(pub.title) + '</span>';
+      }
+
+      /* Authors */
+      html += '<span class="pub-authors">' + esc(pub.authors) + '</span>';
+
+      /* Journal / venue + details */
+      var venue = pub.journal;
+      if (pub.details) venue += ', ' + pub.details;
+      if (pub.year)    venue += ' (' + pub.year + ')';
+      html += '<span class="pub-venue">' + esc(venue) + '</span>';
+
+      /* Link badges row */
+      html += '<div class="pub-links">';
+
+      /* Under-review badge */
+      if (pub.type === 'review') {
+        html += '<span class="pub-review-badge">Under review</span>';
+      }
+
+      /* Open access badge */
+      if (pub.openAccess) {
+        html += '<span class="pub-oa">Open Access</span>';
+      }
+
+      /* DOI link */
+      if (pub.doi) {
+        html += '<a class="pub-link" href="' + esc(doiUrl(pub.doi)) + '" target="_blank" rel="noopener">DOI</a>';
+      }
+
+      /* Extra links (arXiv, postprint, code, video, etc.) */
+      if (pub.links) {
+        pub.links.forEach(function (lnk) {
+          /* Skip links with empty URLs (placeholders in the data file) */
+          if (!lnk.url || lnk.url === 'assets/files/') return;
+          html += '<a class="pub-link" href="' + esc(lnk.url) + '" target="_blank" rel="noopener">'
+               + esc(lnk.label) + '</a>';
+        });
+      }
+
+      html += '</div>'; /* /pub-links */
+      html += '</div>'; /* /pub-entry */
+      return html;
+    }
+
+    /* Main render function — called whenever filter or search changes */
+    function render() {
+      var list  = document.getElementById('pub-list');
+      var count = document.getElementById('pub-count');
+
+      /* Filter the data */
+      var filtered = PUBLICATIONS.filter(function (pub) {
+        /* Type filter */
+        if (activeFilter !== 'all' && pub.type !== activeFilter) return false;
+
+        /* Text search (case-insensitive, checks title + authors + journal) */
+        if (searchTerm) {
+          var haystack = (pub.title + ' ' + pub.authors + ' ' + pub.journal).toLowerCase();
+          if (haystack.indexOf(searchTerm) === -1) return false;
+        }
+
+        return true;
+      });
+
+      /* Update count */
+      count.textContent = 'Showing ' + filtered.length + ' of ' + PUBLICATIONS.length;
+
+      /* Empty state */
+      if (filtered.length === 0) {
+        list.innerHTML = '<div class="pub-empty"><p>No publications match the current filter.</p></div>';
+        return;
+      }
+
+      /* Group by year (or "Under Review" for type=review) */
+      var groups = {};
+      filtered.forEach(function (pub) {
+        var key = pub.type === 'review' ? 'Under Review' : String(pub.year);
+        if (!groups[key]) groups[key] = [];
+        groups[key].push(pub);
+      });
+
+      /* Sort year keys descending; put "Under Review" first */
+      var keys = Object.keys(groups).sort(function (a, b) {
+        if (a === 'Under Review') return -1;
+        if (b === 'Under Review') return 1;
+        return parseInt(b) - parseInt(a);
+      });
+
+      /* Build HTML */
+      var html = '';
+      keys.forEach(function (key) {
+        html += '<h2 class="pub-year-heading">' + esc(key) + '</h2>';
+        groups[key].forEach(function (pub) {
+          html += renderEntry(pub);
+        });
+      });
+
+      list.innerHTML = html;
+    }
+
+    /* Wire up the filter buttons */
+    document.getElementById('type-filters').addEventListener('click', function (e) {
+      if (e.target.matches('.pub-filter-btn')) {
+        /* Deactivate all, activate clicked */
+        document.querySelectorAll('.pub-filter-btn').forEach(function (btn) {
+          btn.classList.remove('active');
+        });
+        e.target.classList.add('active');
+        activeFilter = e.target.dataset.filter;
+        render();
+      }
+    });
+
+    /* Wire up the search box */
+    document.getElementById('pub-search-input').addEventListener('input', function (e) {
+      searchTerm = e.target.value.trim().toLowerCase();
+      render();
+    });
+
+    /* Initial render on page load */
+    render();
+  </script>
+
+</body>
+</html>

@@ -1,1 +1,284 @@
-<h1>Hello World</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MSOE Group — Multiphysics Simulation, Optimisation and Experimentation, SDU</title>
+  <meta name="description" content="The MSOE research group at the University of Southern Denmark focuses on multiphysics simulation, topology optimisation, and experimental validation.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ======================================================
+       NAVIGATION
+       ====================================================== -->
+  <header>
+    <nav class="main-nav">
+      <div class="container">
+        <a href="index.html" class="nav-logo"><span>MSOE</span> Group</a>
+        <!-- Hamburger button shown on mobile only (see style.css) -->
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="presentations.html">Presentations</a></li>
+          <li><a href="group.html">Group</a></li>
+          <li><a href="biography.html">Biography</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- ======================================================
+       HERO — group introduction
+       ====================================================== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__inner">
+
+        <div class="hero__text">
+          <span class="eyebrow" style="color:#7bba8e;">University of Southern Denmark</span>
+          <h1>Multiphysics Simulation,<br><span>Optimisation</span> &amp; Experimentation</h1>
+          <p>
+            The MSOE group develops advanced numerical methods and computational tools
+            for the automatic design of engineering systems governed by coupled
+            multiphysics phenomena — heat transfer, fluid flow, solid mechanics,
+            and their interactions.
+          </p>
+          <div class="hero-links">
+            <a href="projects.html" class="btn btn--primary">Research Projects</a>
+            <a href="group.html" class="btn btn--outline">Meet the Group</a>
+            <a href="publications.html" class="btn btn--outline">Publications</a>
+          </div>
+        </div>
+
+        <div class="hero__image">
+          <!--
+            Replace this placeholder with a group photo.
+            Add a file called assets/images/group-photo.jpg
+            and change the lines below to:
+              <img src="assets/images/group-photo.jpg" alt="The MSOE group">
+          -->
+          <div class="hero__image-placeholder">
+            Group photo<br><small>Add <code>assets/images/group-photo.jpg</code></small>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================================================
+       THREE PILLARS — Simulation / Optimisation / Experimentation
+       ====================================================== -->
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">Our approach</span>
+      <h2>Three complementary research tools</h2>
+      <p>
+        We combine high-fidelity simulations, automated design optimisation, and
+        physical experiments to understand and improve complex engineering systems.
+      </p>
+
+      <div class="pillars">
+
+        <div class="pillar">
+          <h3>Simulation</h3>
+          <p>
+            We build advanced numerical models — finite element and finite volume methods,
+            parallel solvers, space-time discretisations — to gain deep understanding
+            of multiphysics phenomena across multiple scales.
+          </p>
+        </div>
+
+        <div class="pillar">
+          <h3>Topology Optimisation</h3>
+          <p>
+            We use <em>computational morphogenesis</em> to automatically generate
+            high-performance designs. Given physics and constraints, the algorithm
+            finds the optimal material distribution — shapes no engineer would
+            think of by hand.
+          </p>
+        </div>
+
+        <div class="pillar">
+          <h3>Experimentation</h3>
+          <p>
+            Physical experiments validate our models and manufactured designs.
+            We maintain setups for electronics cooling and conjugate heat transfer,
+            in close collaboration with the Fluid Mechanics group at SDU.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================================================
+       APPLICATION AREAS
+       ====================================================== -->
+  <section class="section section--alt">
+    <div class="container">
+      <span class="eyebrow">Where we work</span>
+      <h2>Application domains</h2>
+      <p>
+        Our methods are applied to a wide range of engineering challenges,
+        from cooling electronics to designing components for fusion energy reactors.
+      </p>
+
+      <div class="domains">
+        <div class="domain-card">Electronics cooling</div>
+        <div class="domain-card">Heat exchangers</div>
+        <div class="domain-card">Microfluidic devices</div>
+        <div class="domain-card">Conjugate heat transfer</div>
+        <div class="domain-card">Thermal management</div>
+        <div class="domain-card">Fusion energy</div>
+        <div class="domain-card">Additive manufacturing</div>
+        <div class="domain-card">Fluid–structure interaction</div>
+        <div class="domain-card">Thermomechanical manufacturing</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================================================
+       COMPUTATIONAL APPROACH
+       ====================================================== -->
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">How we compute</span>
+      <h2>From desktop to supercomputer</h2>
+      <p>
+        We use a multi-tiered computational approach, matching the tool to the problem:
+      </p>
+
+      <div class="pillars">
+
+        <div class="pillar">
+          <h3>Commercial software</h3>
+          <p>
+            For analysis of existing devices and for problems where flexibility is less
+            critical, we use commercial solvers (e.g. COMSOL).
+          </p>
+        </div>
+
+        <div class="pillar">
+          <h3>Open-source frameworks</h3>
+          <p>
+            When we need to implement novel methods and access source code,
+            we work with open-source frameworks such as Firedrake and FreeFEM.
+          </p>
+        </div>
+
+        <div class="pillar">
+          <h3>In-house parallel codes</h3>
+          <p>
+            For large-scale problems — billions of degrees of freedom — we develop
+            bespoke parallel codes that run on national supercomputers.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================================================
+       COLLABORATIONS
+       ====================================================== -->
+  <section class="section section--alt">
+    <div class="container">
+      <span class="eyebrow">Working with others</span>
+      <h2>Collaborations</h2>
+      <p>
+        We work closely with academic and industrial partners across Europe and beyond.
+      </p>
+
+      <div class="collab-grid">
+
+        <div class="collab-group">
+          <h4>Academic</h4>
+          <ul>
+            <li>Technical University of Denmark (DTU)</li>
+            <li>Brown University, USA (CRUNCH group)</li>
+            <li>Kyoto University, Japan</li>
+            <li>University of Colorado Boulder, USA</li>
+            <li>University of Utah, USA</li>
+            <li>Central South University, China</li>
+            <li>Carleton University, Canada</li>
+          </ul>
+        </div>
+
+        <div class="collab-group">
+          <h4>Industry</h4>
+          <ul>
+            <li>Vestas Aircoil, Denmark</li>
+            <li>CT-IPC, France</li>
+            <li>FlowServe (via University of Utah)</li>
+            <li>Corintis, Switzerland</li>
+            <li>Diabatix, Belgium</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================================================
+       LOCATION
+       ====================================================== -->
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">Find us</span>
+      <h2>Location</h2>
+      <p>
+        We are part of the
+        <a href="https://www.sdu.dk/en/forskning/sdumechanicalengineering/researchareas/multiphysics-simulation-and-optimisation" target="_blank" rel="noopener">
+          Department of Mechanical and Electrical Engineering
+        </a>
+        at the University of Southern Denmark, Odense.
+      </p>
+      <p style="margin-top: 12px; font-family: var(--font-ui); font-size: 0.9rem; color: var(--text-light);">
+        SDU Mechanical Engineering &nbsp;&bull;&nbsp;
+        Campusvej 55 &nbsp;&bull;&nbsp;
+        DK-5230 Odense M, Denmark
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ======================================================
+       FOOTER
+       ====================================================== -->
+  <footer class="main-footer">
+    <div class="container">
+      <span>&copy; MSOE Group, University of Southern Denmark</span>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="publications.html">Publications</a>
+        <a href="presentations.html">Presentations</a>
+        <a href="group.html">Group</a>
+        <a href="biography.html">Biography</a>
+      </nav>
+    </div>
+  </footer>
+
+
+  <!-- Mobile navigation toggle (pure vanilla JS, no library needed) -->
+  <script>
+    var toggle = document.querySelector('.nav-toggle');
+    var links  = document.querySelector('.nav-links');
+    toggle.addEventListener('click', function () {
+      var isOpen = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  </script>
+
+</body>
+</html>

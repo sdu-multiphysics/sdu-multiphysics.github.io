@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research Projects — MSOE Group, SDU</title>
+  <meta name="description" content="Current and recent research projects of the MSOE group at the University of Southern Denmark.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ======================================================
+       NAVIGATION
+       ====================================================== -->
+  <header>
+    <nav class="main-nav">
+      <div class="container">
+        <a href="index.html" class="nav-logo"><span>MSOE</span> Group</a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="presentations.html">Presentations</a></li>
+          <li><a href="group.html">Group</a></li>
+          <li><a href="biography.html">Biography</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- ======================================================
+       PAGE HEADER
+       ====================================================== -->
+  <div class="page-header">
+    <div class="container">
+      <h1>Research Projects</h1>
+      <p>Ongoing and recently completed funded research in the MSOE group.</p>
+    </div>
+  </div>
+
+
+  <main>
+    <div class="container">
+
+
+      <!-- ====================================================
+           COMFORT
+           ==================================================== -->
+      <div class="project-card">
+        <h2>COMFORT</h2>
+        <p style="font-family:var(--font-ui); font-size:0.88rem; color:var(--text-light); margin-bottom:10px;">
+          COmputational Morphogenesis FOR Time-dependent problems
+        </p>
+
+        <div class="project-meta">
+          <span class="project-tag project-tag--funding">DFF Sapere Aude Research Leader</span>
+          <span class="project-tag">February 2024 – December 2027</span>
+          <span class="project-tag">SDU</span>
+        </div>
+
+        <p class="project-desc">
+          Topology optimisation of time-dependent problems — such as transient heat diffusion
+          and time-dependent fluid flow — requires solving the governing equations forward and
+          backward in time at every optimisation iteration. A single simulation can take 12+ hours,
+          making design optimisation impractically slow (up to 200 days).
+        </p>
+        <p class="project-desc">
+          COMFORT develops specialised <em>space-time methods</em> that treat time as an additional
+          spatial dimension and solve the full space-time problem in parallel, targeting at least a
+          10-fold reduction in time-to-solution. The approach has already demonstrated a 52× speed-up
+          over sequential time-stepping, solving problems with 4.2 billion degrees of freedom in just
+          17 minutes on 64,000 CPU cores.
+        </p>
+        <p class="project-desc">
+          Key applications include the optimisation of fluidic oscillators (relevant for wind
+          energy, cooling, and lab-on-a-chip mixing) and heat spreaders with phase-change materials.
+        </p>
+
+        <p class="project-people">
+          <strong>PI:</strong> Joe Alexandersen &nbsp;|&nbsp;
+          <strong>Ph.D. student:</strong> Magnus Højmose Appel (Sep. 2024 – Aug. 2027) &nbsp;|&nbsp;
+          <strong>Postdoc:</strong> Sarah Nataj (Apr. 2025 – Mar. 2027)
+        </p>
+
+        <div class="project-links">
+          <a href="https://www.sdu.dk/en/forskning/sdumechanicalengineering/researchprojects/computational-morphogenesis-for-time-dependent-problems-comfort"
+             class="btn btn--primary" target="_blank" rel="noopener">
+            Project page (SDU)
+          </a>
+        </div>
+      </div>
+
+
+      <!-- ====================================================
+           ADeHEx
+           ==================================================== -->
+      <div class="project-card">
+        <h2>ADeHEx</h2>
+        <p style="font-family:var(--font-ui); font-size:0.88rem; color:var(--text-light); margin-bottom:10px;">
+          Homogenisation-based topology optimisation of heat exchangers
+        </p>
+
+        <div class="project-meta">
+          <span class="project-tag project-tag--funding">Marie Skłodowska-Curie Postdoctoral Fellowship</span>
+          <span class="project-tag">October 2023 – September 2025</span>
+          <span class="project-tag">SDU + Brown University</span>
+        </div>
+
+        <p class="project-desc">
+          Microchannel heat exchangers offer exceptional heat transfer performance but are challenging
+          to design because the channel features are far smaller than the overall device. This project
+          develops <em>homogenisation-based</em> topology optimisation methods that treat the
+          micro-scale channels as an effective medium, enabling the simultaneous optimisation of both
+          the channel microstructure and the overall flow layout at practical computational cost.
+        </p>
+        <p class="project-desc">
+          The project includes a secondment at Brown University (CRUNCH group, Prof. George Karniadakis),
+          combining the group's expertise in topology optimisation with advanced numerical methods
+          for fluid dynamics.
+        </p>
+
+        <p class="project-people">
+          <strong>Postdoc:</strong> Hao Li (Oct. 2023 – Sep. 2025) &nbsp;|&nbsp;
+          <strong>Supervisor:</strong> Joe Alexandersen &nbsp;|&nbsp;
+          <strong>Secondment:</strong> Brown University, USA
+        </p>
+      </div>
+
+
+      <!-- ====================================================
+           HiHeat
+           ==================================================== -->
+      <div class="project-card">
+        <h2>HiHeat</h2>
+        <p style="font-family:var(--font-ui); font-size:0.88rem; color:var(--text-light); margin-bottom:10px;">
+          Topology optimisation for High HEAT flux cooling
+        </p>
+
+        <div class="project-meta">
+          <span class="project-tag project-tag--funding">Mixed funding</span>
+          <span class="project-tag">February 2024 – January 2027</span>
+          <span class="project-tag">SDU</span>
+        </div>
+
+        <p class="project-desc">
+          Components in fusion energy reactors (such as the W7-X stellarator's divertor) and in
+          high-performance electronics must absorb and remove extreme heat fluxes under turbulent
+          flow conditions. Standard topology optimisation methods assume laminar flow and low heat
+          loads — neither holds here.
+        </p>
+        <p class="project-desc">
+          HiHeat extends topology optimisation to conjugate heat transfer problems with
+          <em>turbulent flow</em>, using RANS (Reynolds-Averaged Navier–Stokes) models with
+          wall functions. The density-based approach allows the wall definition to be driven
+          implicitly by the design field, improving mesh efficiency. Current results already show
+          a 29% improvement in thermal extraction with an 11% smaller pressure drop compared to
+          existing designs for the W7-X divertor.
+        </p>
+
+        <p class="project-people">
+          <strong>PI:</strong> Joe Alexandersen &nbsp;|&nbsp;
+          <strong>Ph.D. student:</strong> Amirhossein Bayat (Feb. 2024 – Jan. 2027)
+        </p>
+
+        <div class="project-links">
+          <a href="https://www.sdu.dk/en/forskning/sdumechanicalengineering/researchprojects/topology-optimisation-for-high-heat-flux-cooling-hiheat"
+             class="btn btn--primary" target="_blank" rel="noopener">
+            Project page (SDU)
+          </a>
+        </div>
+      </div>
+
+
+      <!-- ====================================================
+           Vestas aircoil — ADeHEx industrial
+           ==================================================== -->
+      <div class="project-card">
+        <h2>Vestas Aircoil: High-temperature heat exchangers</h2>
+        <p style="font-family:var(--font-ui); font-size:0.88rem; color:var(--text-light); margin-bottom:10px;">
+          Advanced design for high temperature-difference heat exchangers using computational morphogenesis
+        </p>
+
+        <div class="project-meta">
+          <span class="project-tag project-tag--funding">Industrial Ph.D. — IFD &amp; Vestas Aircoil</span>
+          <span class="project-tag">March 2025 – February 2028</span>
+          <span class="project-tag">SDU + Vestas Aircoil</span>
+        </div>
+
+        <p class="project-desc">
+          Heat exchangers with very large temperature differences — used in exhaust gas recirculation,
+          Power-to-X systems, and thermal energy storage — develop significant thermomechanical
+          stresses and deformations. Conventional design methods cannot reliably deliver solutions
+          that handle these loads while maintaining performance.
+        </p>
+        <p class="project-desc">
+          This Industrial Ph.D. project, in collaboration with
+          <a href="https://www.vestasaircoil.com/" target="_blank" rel="noopener">Vestas Aircoil</a>,
+          applies topology optimisation and computational morphogenesis to simultaneously account for
+          thermomechanical deformations, vibration, and pressure loads — producing designs that
+          are both thermally efficient and structurally robust.
+        </p>
+
+        <p class="project-people">
+          <strong>Industrial Ph.D. student:</strong> Morten Bjerre Jonathansen (Mar. 2025 – Feb. 2028) &nbsp;|&nbsp;
+          <strong>Academic supervisor:</strong> Joe Alexandersen &nbsp;|&nbsp;
+          <strong>Industry partner:</strong> Vestas Aircoil, Denmark
+        </p>
+
+        <div class="project-links">
+          <a href="https://www.sdu.dk/en/forskning/sdumechanicalengineering/researchprojects/advanced-design-for-high-temperature-difference-heat-exchangers-using-computational-morphogenesis"
+             class="btn btn--primary" target="_blank" rel="noopener">
+            Project page (SDU)
+          </a>
+        </div>
+      </div>
+
+
+      <!-- ====================================================
+           CT-IPC — conformal cooling channels
+           ==================================================== -->
+      <div class="project-card">
+        <h2>CT-IPC: Conformal cooling channels for injection moulding</h2>
+        <p style="font-family:var(--font-ui); font-size:0.88rem; color:var(--text-light); margin-bottom:10px;">
+          Design of conformal cooling channels using topology optimisation
+        </p>
+
+        <div class="project-meta">
+          <span class="project-tag project-tag--funding">Commercial research funding</span>
+          <span class="project-tag">September 2024 – August 2025</span>
+          <span class="project-tag">SDU + CT-IPC (France)</span>
+        </div>
+
+        <p class="project-desc">
+          In injection moulding, cooling channels must be positioned close to the mould surface
+          and follow its geometry ("conformal" channels) to cool parts uniformly and reduce cycle
+          time. Designing these channels by hand is difficult; additive manufacturing now makes it
+          possible to produce almost any channel geometry — but we need automated design tools to
+          take full advantage of this freedom.
+        </p>
+        <p class="project-desc">
+          This project develops topology optimisation formulations that control both cooling
+          efficiency and temperature uniformity across the mould surface. A 2D formulation has been
+          published; 3D results for real-life geometries are forthcoming.
+        </p>
+
+        <p class="project-people">
+          <strong>Postdoc:</strong> Yupeng Sun (2024–2025) &nbsp;|&nbsp;
+          <strong>Supervisor:</strong> Joe Alexandersen &nbsp;|&nbsp;
+          <strong>Industry partner:</strong> CT-IPC (Centre Technique Industriel de la Plasturgie et des Composites), France
+        </p>
+
+        <div class="project-links">
+          <a href="https://www.sdu.dk/en/forskning/sdumechanicalengineering/researchprojects/design-of-conformal-cooling-channels-using-topology-optimisation"
+             class="btn btn--primary" target="_blank" rel="noopener">
+            Project page (SDU)
+          </a>
+        </div>
+      </div>
+
+
+      <!-- ====================================================
+           Fusion energy (NNF contribution)
+           ==================================================== -->
+      <div class="project-card">
+        <h2>Fusion energy: electromagnetic–structure interaction</h2>
+        <p style="font-family:var(--font-ui); font-size:0.88rem; color:var(--text-light); margin-bottom:10px;">
+          Contributing to the NNF Challenge project on continuously operating fusion power plants
+        </p>
+
+        <div class="project-meta">
+          <span class="project-tag project-tag--funding">Novo Nordisk Foundation (NNF) Challenge Project</span>
+          <span class="project-tag">2026 –</span>
+          <span class="project-tag">SDU contribution</span>
+        </div>
+
+        <p class="project-desc">
+          First-wall components of fusion reactors — specifically, the gaps between tungsten tiles
+          in stellarators — interact with the high-frequency millimetre waves used for plasma heating.
+          Understanding and minimising these interactions requires advanced electromagnetic–structure
+          simulations.
+        </p>
+        <p class="project-desc">
+          The MSOE group contributes a one-year postdoc position to the NNF Challenge project
+          <em>"Enabling Continuously Operating Nuclear Fusion Power Plants"</em> led by
+          Prof. Stefan Kragh Nielsen (DTU). The work focuses on identifying and implementing the
+          best numerical methods for simulating wave–tile interactions, with experiments planned
+          for 2027.
+        </p>
+
+        <p class="project-people">
+          <strong>Lead PI:</strong> Stefan Kragh Nielsen (DTU) &nbsp;|&nbsp;
+          <strong>MSOE contribution:</strong> 1-year postdoc (starting 2026)
+        </p>
+
+        <div class="project-links">
+          <a href="https://t.ly/dsl9K" class="btn btn--primary" target="_blank" rel="noopener">
+            More about the project
+          </a>
+        </div>
+      </div>
+
+
+      <!-- ====================================================
+           Note about more projects
+           ==================================================== -->
+      <p style="margin: 40px 0 48px; color: var(--text-light); font-family: var(--font-ui); font-size:0.9rem;">
+        For a full list of funded projects associated with the group, see also the
+        <a href="https://www.sdu.dk/en/forskning/sdumechanicalengineering/researchprojects" target="_blank" rel="noopener">
+          SDU Mechanical Engineering research projects page
+        </a>.
+      </p>
+
+
+    </div><!-- /container -->
+  </main>
+
+
+  <!-- ======================================================
+       FOOTER
+       ====================================================== -->
+  <footer class="main-footer">
+    <div class="container">
+      <span>&copy; MSOE Group, University of Southern Denmark</span>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="publications.html">Publications</a>
+        <a href="presentations.html">Presentations</a>
+        <a href="group.html">Group</a>
+        <a href="biography.html">Biography</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    var toggle = document.querySelector('.nav-toggle');
+    var links  = document.querySelector('.nav-links');
+    toggle.addEventListener('click', function () {
+      var isOpen = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+# Project documentation (working files for Claude Code — keep local, not public)
+CLAUDE.md
+DESIGN.md
+CONTENT.md
+ASSETS.md
+prompt.md
+
+# PowerPoint source files
+*.pptx
+*.ppt
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.bak
+*.orig
+
+# Node (if any tooling is ever added)
+node_modules/
+npm-debug.log
+
+# Build output (if any tooling is ever added)
+_site/
+dist/
