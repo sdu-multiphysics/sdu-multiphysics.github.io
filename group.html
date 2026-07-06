@@ -158,7 +158,8 @@
       var pastVisiting = MEMBERS.filter(function (m) { return m.type === 'past-visiting'; });
       var pastRA       = MEMBERS.filter(function (m) { return m.type === 'past-ra'; });
       var pastSA       = MEMBERS.filter(function (m) { return m.type === 'past-sa'; });
-      var pastThesis   = MEMBERS.filter(function (m) { return m.type === 'past-thesis-master'; });
+      var pastThesis     = MEMBERS.filter(function (m) { return m.type === 'past-thesis-master'; });
+      var pastThesisBach = MEMBERS.filter(function (m) { return m.type === 'past-thesis-bachelor'; });
 
       var html = '';
 
@@ -182,7 +183,7 @@
       }
 
       /* ── Past Members ── */
-      var hasPast = pastPostdoc.length || pastVisiting.length || pastRA.length || pastSA.length || pastThesis.length;
+      var hasPast = pastPostdoc.length || pastVisiting.length || pastRA.length || pastSA.length || pastThesis.length || pastThesisBach.length;
       if (hasPast) {
         html += '<div class="past-section">';
         html += '<h2 style="margin: 56px 0 8px;">Past Members</h2>';
@@ -199,6 +200,9 @@
         }
         if (pastSA.length) {
           html += '<h3>Student Assistants</h3>' + renderPastList(pastSA);
+        }
+        if (pastThesisBach.length) {
+          html += '<h3>Past Bachelor Thesis Students</h3>' + renderPastList(pastThesisBach);
         }
         if (pastThesis.length) {
           html += '<h3>Past Master Thesis Students</h3>' + renderPastList(pastThesis);

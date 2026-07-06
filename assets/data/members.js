@@ -16,7 +16,8 @@
  *   "past-visiting"    → Past Members → Visiting Ph.D. Students
  *   "past-ra"          → Past Members → Research Assistants
  *   "past-sa"          → Past Members → Student Assistants
- *   "past-thesis-master" → Past Members → Past Master Thesis Students
+ *   "past-thesis-master"   → Past Members → Past Master Thesis Students
+ *   "past-thesis-bachelor" → Past Members → Past Bachelor Thesis Students
  *
  * FIELDS FOR CURRENT MEMBERS
  *   name        — Full name (required)
@@ -71,7 +72,7 @@ const MEMBERS = [
     name:        "Hao Li",
     role:        "Postdoctoral Researcher",
     photo:       "assets/images/group/hao-li.jpg",
-    description: "Hao works on homogenisation-based topology optimisation methods for microchannel heat exchangers, with a focus on space-time adaptive mesh refinement to reduce computational cost. He was funded by the Marie Skłodowska-Curie Postdoctoral Fellowship (ADeHEx project, Oct. 2023–Sep. 2025) with a secondment at Brown University. He is currently funded by the COMFORT project.",
+    description: "Hao works on homogenisation-based topology optimisation methods for microchannel heat exchangers and space-time adaptive mesh refinement to reduce computational cost. He was funded by the Marie Skłodowska-Curie Postdoctoral Fellowship (ADeHEx project, Oct. 2023–Sep. 2025) with a secondment at Brown University. He is currently funded by the COMFORT project.",
     funding:     "Funding: COMFORT project (from Oct. 2025)",
   },
 
@@ -133,28 +134,34 @@ const MEMBERS = [
      CURRENT THESIS STUDENTS
      ============================================================ */
 
-  {
-    type:  "thesis-master",
-    name:  "Christian H Larsen &amp; Jacob MS Andersen",
-    topic: "Topology optimisation of electric motor cooling",
-  },
-
-  {
-    type:  "thesis-master",
-    name:  "Erik Detlefsen",
-    topic: "Simulation of interactions between electromagnetic waves and tungsten tiles",
-  },
-
-  {
-    type:  "thesis-bachelor",
-    name:  "Ellen Kanstrup Larsen",
-    topic: "Quantum computing for PDEs and optimisation",
-  },
-
-
   /* ============================================================
      PAST MEMBERS
      ============================================================ */
+
+  {
+    type:   "past-thesis-master",
+    name:   "Christian H Larsen",
+    period: "2025–2026",
+  },
+
+  {
+    type:   "past-thesis-master",
+    name:   "Jacob MS Andersen",
+    period: "2025–2026",
+  },
+
+  {
+    type:   "past-thesis-master",
+    name:   "Erik Detlefsen",
+    period: "2026",
+  },
+
+  {
+    type:   "past-thesis-bachelor",
+    name:   "Ellen Kanstrup Larsen",
+    period: "2026",
+  },
+
 
   {
     type:   "past-postdoc",
@@ -218,38 +225,111 @@ const MEMBERS = [
   },
 
   {
-    type: "past-thesis-master",
-    name: "Casper Skjold Buhrkall",
+    type:   "past-thesis-master",
+    name:   "Casper Skjold Buhrkall",
+    period: "2024–2025",
   },
 
   {
-    type: "past-thesis-master",
-    name: "Kristian Søberg",
+    type:   "past-thesis-master",
+    name:   "Kristian Søberg",
+    period: "2024",
   },
 
   {
-    type: "past-thesis-master",
-    name: "Jens Ole Jepsen",
+    type:   "past-thesis-master",
+    name:   "Jens Ole Jepsen",
+    period: "2024",
   },
 
   {
-    type: "past-thesis-master",
-    name: "Christopher Becker",
+    type:   "past-thesis-master",
+    name:   "Christopher Becker",
+    period: "2024",
   },
 
   {
-    type: "past-thesis-master",
-    name: "Mathias Arnløv Graversen",
+    type:   "past-thesis-master",
+    name:   "Mathias Arnløv Graversen",
+    period: "2024",
   },
 
   {
-    type: "past-thesis-master",
-    name: "Christian Buur Kej",
+    type:   "past-thesis-master",
+    name:   "Christian Buur Kej",
+    period: "2024",
   },
 
   {
-    type: "past-thesis-master",
-    name: "Victor Lindberg Brink",
+    type:   "past-thesis-master",
+    name:   "Victor Lindberg Brink",
+    period: "2024",
+  },
+
+  {
+    type:   "past-thesis-master",
+    name:   "David Vestergaard Pedersen",
+    period: "2023",
+  },
+
+  {
+    type:   "past-thesis-master",
+    name:   "Kasper Andreas Helt Andresen",
+    period: "2023",
+  },
+
+  {
+    type:   "past-thesis-master",
+    name:   "Rasmus Jakobsen",
+    period: "2023",
+  },
+
+  {
+    type:   "past-thesis-master",
+    name:   "Mathias Valentin Ingerslev",
+    period: "2023",
+  },
+
+  {
+    type:   "past-thesis-master",
+    name:   "Morten Bjerre Jonathansen",
+    period: "2023",
+  },
+
+  {
+    type:   "past-thesis-master",
+    name:   "Mark Bjerre Müller Christensen",
+    period: "2022",
+  },
+
+  {
+    type:   "past-thesis-master",
+    name:   "Magnus Højmose Appel",
+    period: "2022",
+  },
+
+  {
+    type:   "past-thesis-master",
+    name:   "Jonathan Tulsgaard Krogh",
+    period: "2021",
+  },
+
+  {
+    type:   "past-thesis-master",
+    name:   "Anders Dyreborg Schmidt",
+    period: "2021",
+  },
+
+  {
+    type:   "past-thesis-master",
+    name:   "Kevin Evardsen Grau",
+    period: "2020",
+  },
+
+  {
+    type:   "past-thesis-master",
+    name:   "Anders Foldager Bay Jensen",
+    period: "2020",
   },
 
 ]; /* end of MEMBERS array */
